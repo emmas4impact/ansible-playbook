@@ -1,0 +1,7 @@
+---
+- hosts: development
+  become: true  
+
+  roles:
+    - common
+    - webserver

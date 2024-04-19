@@ -1,0 +1,15 @@
+- name: Update apt packages
+  apt:
+    name: "*"
+    state: latest
+    update_cache: yes
+
+- name: Install common dependencies
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages: 
+      - git
+      - unzip
+      # ... (Other common packages)
