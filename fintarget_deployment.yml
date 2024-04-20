@@ -1,5 +1,5 @@
 ---
-- hosts: apache_server
+- hosts: webserver
   become: true  
 
   roles:
