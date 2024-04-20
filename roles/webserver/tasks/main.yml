@@ -5,8 +5,8 @@
 
 - name: Copy FinTarget application code
   copy:
-    src: /path/to/your/fintarget/code/  
-    dest: /var/www/html/
+    src: /etc/ansible/ansible-playbook/index.html  
+    dest: /var/www/html/index.html
 
 - name: Start Apache service
   service:

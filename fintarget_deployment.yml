@@ -1,7 +1,13 @@
 ---
-- hosts: development
+- hosts: apache_server
   become: true  
 
   roles:
     - common
     - webserver
+  
+  tasks:
+    - name: Check if the FinTarget sample app is reachable
+      uri: 
+        url: http://51.20.107.219
+        status_code: 200
